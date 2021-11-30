@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt');
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+body {
+  background: rgb(211, 205, 245);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  z-index: 2;
+}
+.box {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background: #f8f8f8;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 40px 30px 80px rgba(54, 48, 116, 0.3);
+  border-radius: 60px;
+  padding: 55px;
+  z-index: 1;
+}
+.artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.one-text {
+  font-size: 32px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'liga' off;
+  color: #86748d;
+}
+.two-text {
+  margin-top: 3px;
+  font-size: 16px;
+  color: #86748d;
+}
+.three-text {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #86748d;
+}
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  .now-playing-txt {
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'liga' off;
+
+    color: #aeaeae;
+
+    text-shadow: 1px 1px 1px #ffffff;
+  }
+}
+.img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  background-size: 300px 300px;
+  background-image: url('https://www.spirit-of-metal.com/les%20goupes/P/Purple%20Haze%20(PL)/pics/logo.jpg');
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f8f8f8;
+  box-shadow: -10px -10px 15px #ffffff, 10px 10px 10px rgba(0, 0, 0, 0.05),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset -10px -10px 20px #ffffff;
+  margin-left: 6px;
+  border: 0;
+  // z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-container {
+  position: absolute;
+  background: #f7f7f7;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 60px 100px rgb(65 44 100 / 30%);
+  border-radius: 60px;
+  width: 700px;
+  left: 600px;
+  height: 300px;
+  // z-index: -1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  // height: 15px;
+  // width: 15px;
+  cursor: pointer;
+}
+.actionbtns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .big-btn {
+    img {
+      // height: 50px;
+      // width: 50px;
+      border-radius: 50%;
+      background: linear-gradient(
+        159.16deg,
+        #917ce4 26.46%,
+        rgba(63, 45, 137, 0) 116.55%
+      );
+      box-shadow: inset 10px 10px 15px rgba(255, 255, 255, 0.2);
+      filter: drop-shadow(0px 5px 10px rgba(55, 46, 152, 0.65));
+    }
+    .small {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .controls {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar {
+    user-select: none;
+    width: 100%;
+    display: block;
+
+    .time-span {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-family: monospace;
+      padding-top: 10px;
+      font-size: 18px;
+      line-height: 21px;
+      align-items: center;
+      font-feature-settings: 'liga' off;
+      color: #aa9bbe;
+    }
+
+    .bar__time {
+      font-size: 16px;
+    }
+
+    .bar__progress {
+      flex: 1;
+      border-radius: 5px;
+      margin: 0 20px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .bar__progress__knob {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        border: 3px solid white;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: #5d24d6;
+        box-shadow: 0px 10px 10px rgb(0 0 0 / 15%),
+          inset 10px 10px 10px rgb(0 0 0 / 5%), inset -10px -10px 20px #5d24d6;
+      }
+    }
+  }
+}
+.snackbar {
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgb(212, 106, 106);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  position: fixed;
+  border-radius: 30px;
+  left: 50%;
+  bottom: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  z-index: 3;
+}
+@media only screen and (min-width: 320px) and (max-width: 786px) {
+  .container {
+    flex-direction: column;
+    .box {
+      flex-direction: column;
+      .buttons {
+        margin-top: 15px;
+      }
+    }
+    .side-container {
+      position: relative;
+      width: 350px;
+      left: 0;
+      background: none;
+      box-shadow: none;
+      .actionbtns {
+        justify-content: center;
+        .big-btn {
+          img {
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+  .player {
+    .bar {
+      .bar__progress {
+        margin-top: 15px !important;
+      }
+    }
+  }
+}
